@@ -1,0 +1,79 @@
+@mixin sections-template() {
+    display: flex;
+    justify-content: $justify;
+    flex-direction: $fd;
+    padding: $padding;
+}
+
+
+
+// SECTION TITLES
+
+@mixin section-title() {
+    color: white;
+    font-size: 70px;
+    padding: 30px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+
+
+// PARALAX IMAGES
+
+@mixin paralax() {
+    height: 75vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+
+
+// MY SKILLS SECTION
+
+@mixin skills-sections() {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-around;
+    line-height: 50px;
+
+    @media screen and (max-width: 1000px) {
+        justify-content: center;
+        flex-direction: column;
+        line-height: 90px;
+    }
+}
+
+
+
+@mixin section-buttons() {
+        transition: all 0.4s ease;
+        padding: 0.5rem 2.5rem;
+        color: #222;
+        background: $main1;
+        border-radius: 30px;
+        outline: none;
+        margin-top: 20px;
+        border: none;
+        font-size: 30px;
+
+
+        &:hover {
+            transition: all 0.4s ease;
+            opacity: .7;
+            animation: rubberBand;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+
+    
+}
